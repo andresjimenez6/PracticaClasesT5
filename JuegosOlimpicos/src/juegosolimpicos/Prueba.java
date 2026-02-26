@@ -77,13 +77,21 @@ public class Prueba {
     }
     
     
-    public void registrarParticipante(Participante p) {
-        for(int i = 0; i < this.listaDeParticipantes.length; i++) {
-            if(this.listaDeParticipantes[i] == null) {
-                this.listaDeParticipantes[i] = p;
-                break;
+    public boolean registrarParticipante(Participante p) {
+        // Verificar que el participante no esté ya registrado
+        for (Participante participante : this.listaDeParticipantes) {
+            if (participante != null && participante.getNumeroDeIdentificacionOlimpico() == p.getNumeroDeIdentificacionOlimpico()) {
+                return false;
             }
         }
+        // Ampliar el arreglo en 1 y agregar el participante
+        Participante[] nuevaLista = new Participante[this.listaDeParticipantes.length + 1];
+        for (int i = 0; i < this.listaDeParticipantes.length; i++) {
+            nuevaLista[i] = this.listaDeParticipantes[i];
+        }
+        nuevaLista[nuevaLista.length - 1] = p;
+        this.listaDeParticipantes = nuevaLista;
+        return true;
         
     }
     
