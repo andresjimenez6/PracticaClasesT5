@@ -9,7 +9,7 @@ package juegosolimpicos;
  *
  * @author EAG
  */
-public class Participante {
+public abstract class Participante {
     private String nombre;
     private String pais;
     private int edad;
@@ -81,9 +81,6 @@ public class Participante {
         this.numeroTotalDeMedallasObtenidas = numeroTotalDeMedallasObtenidas;
     }
     
-    public int calcularNumeroTotalDeMedallasObtenidas(int numeroTotalDeMedallasObtenidas){
-        int total = 0;
-        
-        return total;
-    }
+    public abstract int calcularNumeroTotalDeMedallasObtenidas(int numeroTotalDeMedallasObtenidas);
+
 }

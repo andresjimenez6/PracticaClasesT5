@@ -26,8 +26,21 @@ public class DeportistasIndividuales extends Participante{
         super(c);
         this.especialidad= c.especialidad;
     }
+
+    public String getEspecialidad() {
+        return especialidad;
+    }
+
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
+    }
     
     
     
+    @Override
+    public int calcularNumeroTotalDeMedallasObtenidas(int Medallas){
+        
+        return super.getNumeroTotalDeMedallasObtenidas();
+    }
     
 }
