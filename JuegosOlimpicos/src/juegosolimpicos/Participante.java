@@ -83,4 +83,11 @@ public abstract class Participante {
     
     public abstract int calcularNumeroTotalDeMedallasObtenidas(int numeroTotalDeMedallasObtenidas);
 
+    @Override
+    public String toString() {
+        return "Participante{" + "nombre=" + nombre + ", pais=" + pais + ", edad=" + edad + ", numeroDeIdentificacionOlimpico=" + numeroDeIdentificacionOlimpico + ", numeroTotalDeMedallasObtenidas=" + numeroTotalDeMedallasObtenidas + '}';
+    }
+
+    
+    
 }

@@ -42,5 +42,10 @@ public class DeportistasIndividuales extends Participante{
         
         return super.getNumeroTotalDeMedallasObtenidas();
     }
+
+    @Override
+    public String toString() {
+        return "nombre:"+ super.getNombre() + "especialidad=" + especialidad + '}';
+    }
     
 }
